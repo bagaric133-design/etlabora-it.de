@@ -84,7 +84,7 @@ main { background: #fff; }
 .whatsapp-float:hover, .whatsapp-btn:hover { background: #1fbd5a; color: #fff; }
 .secondary { background: #fff; color: var(--ink); }
 
-.hero { align-items: center; background: linear-gradient(90deg, rgba(3,17,38,.96), rgba(3,17,38,.72), rgba(3,17,38,.36)), url('../images/hero.png'); background-position: center; background-size: cover; color: #fff; display: grid; gap: 48px; grid-template-columns: minmax(0, 1fr) 360px; min-height: 560px; padding: 76px 8%; }
+.hero { align-items: center; background: linear-gradient(90deg, rgba(3,17,38,.96), rgba(3,17,38,.72), rgba(3,17,38,.36)), url('../images/hero.png'); background-position: center; background-size: cover; color: #fff; display: grid; gap: 48px; grid-template-columns: minmax(0, 1fr); min-height: 560px; padding: 76px 8%; }
 .hero-content { max-width: 690px; }
 .label { color: var(--cyan); font-size: 13px; font-weight: 900; letter-spacing: .08em; margin-bottom: 14px; text-transform: uppercase; }
 h1 { font-size: clamp(42px, 5vw, 68px); line-height: 1.02; margin-bottom: 24px; }
@@ -93,9 +93,6 @@ h3 { font-size: 20px; }
 p { line-height: 1.65; }
 .hero-text, .hero p, .page-hero p, .cta-band p { color: #dbe8f7; font-size: 18px; }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
-.trust-panel { backdrop-filter: blur(18px); background: rgba(5, 38, 78, .72); border: 1px solid rgba(255,255,255,.16); border-radius: 8px; box-shadow: 0 24px 80px rgba(0,0,0,.28); display: grid; gap: 18px; padding: 26px; }
-.trust-panel strong { color: #fff; display: block; font-size: 18px; margin-bottom: 6px; }
-.trust-panel span { color: #dbe8f7; line-height: 1.55; }
 
 .section { padding: 78px 8%; text-align: center; }
 .services-section, .section { background: var(--soft); }
@@ -181,7 +178,6 @@ p { line-height: 1.65; }
     .nav-btn { width: 100%; }
     .hero, .advantages, .split, .contact-page, .footer { grid-template-columns: 1fr; }
     .hero { padding: 70px 6%; }
-    .trust-panel { max-width: 520px; }
     .cards, .advantage-grid, .feature-box, .testimonials, .stats { grid-template-columns: 1fr; }
     .section, .advantages, .split, .testimonials, .cta-band, .page-hero, .contact-page, .footer { padding-left: 6%; padding-right: 6%; }
     .cta-band { align-items: flex-start; flex-direction: column; }
@@ -944,7 +940,7 @@ p { line-height: 1.65; }
         radial-gradient(circle at 78% 22%, rgba(22,136,255,.24), transparent 25%),
         linear-gradient(100deg, rgba(2,11,25,.99) 0%, rgba(2,11,25,.93) 48%, rgba(2,11,25,.58) 100%),
         url('../images/hero.png') center / cover;
-    grid-template-columns: minmax(0, 1.35fr) minmax(310px, .65fr);
+    grid-template-columns: minmax(0, 1fr);
     min-height: 700px;
     overflow: hidden;
     padding: 98px max(7vw, 34px);
@@ -964,16 +960,6 @@ p { line-height: 1.65; }
 .home-page .hero-buttons .secondary { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.2); color: #fff; }
 .hero-proof { color: #9eb1c8; display: flex; flex-wrap: wrap; font-size: 13px; gap: 22px; margin-top: 28px; }
 .hero-proof span::first-letter { color: var(--home-cyan); }
-.home-page .trust-panel { background: rgba(7,21,38,.77); border-color: rgba(255,255,255,.13); border-radius: 22px; box-shadow: 0 34px 90px rgba(0,0,0,.38); gap: 0; padding: 0; position: relative; z-index: 2; }
-.trust-panel-head { align-items: center; border-bottom: 1px solid rgba(255,255,255,.1); display: flex; gap: 10px; padding: 20px 24px; }
-.trust-panel-head small { color: #c8d7e8; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
-.status-dot { animation: statusPulse 2s infinite; background: #44e08a; border-radius: 50%; box-shadow: 0 0 0 6px rgba(68,224,138,.12); height: 8px; width: 8px; }
-.trust-feature { align-items: flex-start; display: grid; gap: 18px; grid-template-columns: 36px 1fr; padding: 23px 24px; }
-.trust-feature + .trust-feature { border-top: 1px solid rgba(255,255,255,.08); }
-.trust-feature b { color: var(--home-cyan); font-size: 11px; letter-spacing: .08em; padding-top: 4px; }
-.trust-feature p { line-height: 1.4; }
-.trust-feature strong { font-size: 17px; margin-bottom: 7px; }
-.trust-feature span { color: #9fb2c8; font-size: 14px; line-height: 1.55; }
 .home-trustbar { align-items: center; background: var(--home-night); color: #8fa5bd; display: flex; flex-wrap: wrap; font-size: 11px; font-weight: 900; gap: 25px; justify-content: center; letter-spacing: .12em; padding: 24px 5%; text-transform: uppercase; }
 .home-trustbar i { background: rgba(255,255,255,.2); border-radius: 50%; height: 3px; width: 3px; }
 .home-page .services-section { background: #f6f8fb; padding-bottom: 100px; padding-top: 110px; }
@@ -1006,18 +992,14 @@ p { line-height: 1.65; }
 .home-page .quote-card { background: #fff; border: 0; border-radius: 18px; box-shadow: 0 14px 50px rgba(15,38,68,.07); min-height: 150px; }
 .home-page .cta-band { background: linear-gradient(110deg, #0a72e8, #0758bd); padding-bottom: 58px; padding-top: 58px; }
 .home-page .cta-band .btn { background: #fff; box-shadow: none; color: var(--home-night); }
-@keyframes statusPulse { 50% { box-shadow: 0 0 0 10px rgba(68,224,138,0); } }
-
 @media (max-width: 1100px) {
     .home-page .header .whatsapp-btn { display: none; }
     .home-page .nav { gap: 18px; }
-    .home-page .hero { grid-template-columns: 1fr .7fr; }
 }
 @media (max-width: 980px) {
     .home-page .header { align-items: center; flex-direction: row; height: 76px; padding: 0 6%; }
     .home-page .header-actions { margin-left: auto; width: auto; }
     .home-page .hero { grid-template-columns: 1fr; min-height: auto; padding-bottom: 76px; padding-top: 76px; }
-    .home-page .trust-panel { max-width: 620px; }
     .home-process { gap: 50px; grid-template-columns: 1fr; padding: 85px 6%; }
 }
 @media (max-width: 760px) {
@@ -1040,7 +1022,6 @@ p { line-height: 1.65; }
     .home-page .hero { padding: 62px 6%; }
     .home-page .hero h1 { line-height: 1.01; }
     .home-page .hero-buttons .btn { width: 100%; }
-    .home-page .trust-panel { margin-top: 12px; }
     .home-page .services-section { padding-bottom: 75px; padding-top: 75px; }
     .home-process { padding-bottom: 75px; padding-top: 75px; }
     .process-steps article { gap: 14px; grid-template-columns: 38px 1fr; }
