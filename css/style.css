@@ -148,8 +148,6 @@ p { line-height: 1.65; }
 
 .direct-contact-page { align-items: center; }
 .direct-contact-page .contact-info h1 { letter-spacing: -.045em; }
-.contact-availability { align-items: center; color: #dbe8f7; display: flex; font-size: 14px; gap: 12px; margin-top: 32px; }
-.contact-availability span { background: var(--cyan); border-radius: 50%; box-shadow: 0 0 0 6px rgba(34,199,255,.13); height: 8px; width: 8px; }
 .direct-contact-panel { background: #fff; border-radius: 16px; box-shadow: 0 28px 90px rgba(0,0,0,.28); color: var(--ink); padding: clamp(28px, 4vw, 46px); }
 .direct-contact-kicker { color: var(--blue); font-size: 12px; font-weight: 900; letter-spacing: .12em; margin-bottom: 10px; text-transform: uppercase; }
 .direct-contact-panel h2 { font-size: clamp(30px, 3.5vw, 44px); letter-spacing: -.04em; margin-bottom: 30px; }
