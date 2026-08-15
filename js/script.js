@@ -88,12 +88,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    document.querySelectorAll('.form').forEach((form) => {
-        form.addEventListener('submit', (event) => {
+    const contactForm = document.querySelector('#contact-form');
+    const successDialog = document.querySelector('#contact-success-dialog');
+
+    if (contactForm && successDialog) {
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const status = contactForm.querySelector('.contact-form-status');
+        const dialogClose = successDialog.querySelector('.contact-dialog-close');
+        const defaultButtonText = submitButton.textContent;
+
+        contactForm.addEventListener('submit', async (event) => {
             event.preventDefault();
-            alert('Danke! Ihre Nachricht wurde vorbereitet. Bitte E-Mail/Telefon noch mit Ihrem Anbieter verbinden.');
+            if (!contactForm.reportValidity()) return;
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Wird gesendet...';
+            status.className = 'contact-form-status';
+            status.textContent = '';
+
+            try {
+                const fields = Object.fromEntries(new FormData(contactForm).entries());
+                const response = await fetch('https://formsubmit.co/ajax/info@etlabora-it.de', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(fields)
+                });
+                const result = await response.json();
+                if (!response.ok || result.success === false || result.success === 'false') throw new Error('Formularversand fehlgeschlagen');
+
+                contactForm.reset();
+                if (typeof successDialog.showModal === 'function') successDialog.showModal();
+                else successDialog.setAttribute('open', '');
+            } catch (error) {
+                status.className = 'contact-form-status error';
+                status.textContent = 'Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie direkt an info@etlabora-it.de.';
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = defaultButtonText;
+            }
         });
-    });
+
+        dialogClose.addEventListener('click', () => {
+            if (typeof successDialog.close === 'function') successDialog.close();
+            else successDialog.removeAttribute('open');
+        });
+        successDialog.addEventListener('click', (event) => {
+            if (event.target === successDialog && typeof successDialog.close === 'function') successDialog.close();
+        });
+    }
 
     const aiChatbot = document.querySelector('.ai-chatbot');
     if (!aiChatbot) return;
