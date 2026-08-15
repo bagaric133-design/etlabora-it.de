@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="mobile-drawer-contact">
                 <p class="mobile-drawer-eyebrow">Direkter Kontakt</p>
                 <h2>Wie können wir helfen?</h2>
-                <a href="tel:+491729513348"><span>Telefon</span>+49 172 9513348</a>
+                <a href="tel:+4915510385216"><span>Telefon</span>015 510 385216</a>
                 <a href="mailto:info@etlabora-it.de"><span>E-Mail</span>info@etlabora-it.de</a>
                 <p><span>Standort</span>Bonn, Deutschland</p>
                 <a class="mobile-drawer-cta" href="kontakt.html">Erstberatung anfragen <b>→</b></a>
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const answers = [
         { keys: ['leistung', 'angebot', 'service'], text: 'Wir unterstützen bei IT-Beratung, Netzwerk & Server, Microsoft 365, Azure & Intune, IT-Security, Backup & Cloud sowie Service & Support.' },
-        { keys: ['kontakt', 'telefon', 'whatsapp', 'nummer'], text: 'Sie erreichen Etlabora IT telefonisch oder per WhatsApp unter +49 172 9513348 oder per E-Mail an info@etlabora-it.de.' },
+        { keys: ['kontakt', 'telefon', 'whatsapp', 'nummer'], text: 'Sie erreichen Etlabora IT telefonisch oder per WhatsApp unter 015 510 385216 oder per E-Mail an info@etlabora-it.de.' },
         { keys: ['microsoft', '365', 'office', 'teams', 'exchange', 'onedrive'], text: 'Bei Microsoft 365 helfen wir mit Exchange Online, Teams, OneDrive, SharePoint, Einrichtung, Migration und laufender Betreuung.' },
         { keys: ['azure', 'intune', 'entra', 'autopilot'], text: 'Azure & Intune umfasst Geräteverwaltung, Entra ID, Sicherheitsrichtlinien, MFA, Conditional Access und Windows Autopilot.' },
         { keys: ['security', 'sicherheit', 'firewall', 'mfa', 'virenschutz'], text: 'Im Bereich IT-Security unterstützen wir bei Firewall, MFA, Virenschutz, Benutzerrechten und Sicherheitschecks.' },
