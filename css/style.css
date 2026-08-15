@@ -73,6 +73,11 @@ main { background: #fff; }
 .dropdown:hover .dropdown-menu { display: block; }
 .header-actions { align-items: center; display: flex; gap: 12px; }
 .nav-btn, .btn, .whatsapp-btn { align-items: center; border-radius: 7px; display: inline-flex; font-size: 14px; font-weight: 900; justify-content: center; min-height: 44px; padding: 0 22px; }
+.header-actions .nav-btn,
+.header-actions .whatsapp-btn { font-size: 12px; min-height: 36px; padding: 0 14px; }
+.header-actions .wa-icon,
+.header-actions .wa-icon svg { height: 17px; width: 17px; }
+.header-actions .wa-icon { margin-right: 6px; }
 .nav-btn, .primary { background: var(--blue); box-shadow: 0 12px 26px rgba(8, 119, 255, .28); color: #fff; }
 .whatsapp-btn { background: #25d366; box-shadow: 0 12px 26px rgba(37, 211, 102, .24); color: #fff; }
 .whatsapp-float { align-items: center; background: #25d366; border-radius: 999px; bottom: 24px; box-shadow: 0 18px 40px rgba(37, 211, 102, .34); color: #fff; display: inline-flex; font-size: 14px; font-weight: 900; min-height: 52px; padding: 0 20px; position: fixed; right: 24px; z-index: 2000; }
