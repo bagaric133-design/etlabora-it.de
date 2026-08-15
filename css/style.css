@@ -157,20 +157,6 @@ p { line-height: 1.65; }
 .whatsapp-float .wa-icon { height: 24px; width: 24px; }
 .whatsapp-float .wa-icon svg { height: 24px; width: 24px; }
 
-/* Compact contact buttons in the top-right header area. */
-.header-actions .whatsapp-btn,
-.header-actions .nav-btn {
-    font-size: 13px;
-    min-height: 38px;
-    padding: 0 16px;
-}
-.header-actions .wa-icon,
-.header-actions .wa-icon svg {
-    height: 18px;
-    width: 18px;
-}
-.header-actions .wa-icon { margin-right: 7px; }
-
 .hero .label { color: var(--blue); }
 
 .logo-img { display: block; height: auto; width: 174px; }
@@ -808,55 +794,6 @@ p { line-height: 1.65; }
     .home-page .hero-proof { align-items: flex-start; flex-direction: column; gap: 8px; }
     .home-trustbar { gap: 13px; }
     .home-trustbar i { display: none; }
-}
-
-/* Legal pages and privacy information */
-.legal-page { background: var(--soft); padding: 72px 8% 96px; }
-.legal-content { background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 16px 50px rgba(7, 22, 45, .08); margin: 0 auto; max-width: 940px; padding: clamp(28px, 5vw, 64px); }
-.legal-content h1 { font-size: clamp(38px, 5vw, 58px); }
-.legal-content h2 { font-size: clamp(24px, 3vw, 32px); margin-top: 36px; }
-.legal-content h3 { margin-top: 24px; }
-.legal-content p, .legal-content li { color: var(--muted); line-height: 1.75; }
-.legal-content p + p, .legal-content ul { margin-top: 12px; }
-.legal-content ul { padding-left: 22px; }
-.legal-content a, .form-privacy a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
-.legal-placeholder { background: #fff3cd; border-radius: 4px; color: #664d03; display: inline-block; font-weight: 800; padding: 1px 5px; }
-.legal-notice { background: #edf6ff; border-left: 4px solid var(--blue); margin-top: 36px; padding: 18px 20px; }
-.form label { color: var(--ink); font-size: 14px; font-weight: 800; margin-bottom: -8px; }
-.form-privacy { color: var(--muted); font-size: 13px; line-height: 1.55; }
-@media (max-width: 620px) { .legal-page { padding: 48px 6% 72px; } }
-
-/* Price page */
-.price-page { background: var(--soft); }
-.price-hero { min-height: 350px; }
-.price-section { padding: 72px 8%; }
-.price-intro { color: var(--muted); line-height: 1.7; margin: 0 auto 38px; max-width: 880px; text-align: center; }
-.price-grid { display: grid; gap: 22px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0 auto; max-width: 1160px; }
-.price-card { background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 18px 46px rgba(7,22,45,.08); overflow: hidden; }
-.price-card-head { background: var(--navy); color: #fff; padding: 24px 28px; }
-.price-card-head h2 { font-size: 28px; margin: 0; }
-.price-list { list-style: none; }
-.price-list li { align-items: start; border-bottom: 1px solid var(--line); display: flex; gap: 24px; justify-content: space-between; line-height: 1.5; padding: 16px 28px; }
-.price-list li:last-child { border-bottom: 0; }
-.price-list span { color: var(--muted); }
-.price-list strong { color: var(--ink); flex: 0 0 auto; text-align: right; }
-.price-card-wide { grid-column: 1 / -1; }
-.price-card-wide .price-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.price-card-wide .price-list li:nth-last-child(2) { border-bottom: 0; }
-.price-actions { display: flex; flex-wrap: wrap; gap: 12px; padding: 24px 28px 28px; }
-.price-actions .secondary { border: 1px solid var(--line); }
-.price-notes { background: #fff; padding: 72px 8%; }
-.price-notes-inner { margin: 0 auto; max-width: 1000px; }
-.price-notes p { color: var(--muted); line-height: 1.75; }
-.tax-notice { background: #fff3cd; border: 1px solid #ffe69c; border-radius: 10px; color: #664d03 !important; font-weight: 800; margin-top: 26px; padding: 18px 20px; }
-.section-link { margin-top: 28px; }
-@media (max-width: 760px) {
-    .price-grid, .price-card-wide .price-list { grid-template-columns: 1fr; }
-    .price-card-wide { grid-column: auto; }
-    .price-card-wide .price-list li:nth-last-child(2) { border-bottom: 1px solid var(--line); }
-    .price-list li { flex-direction: column; gap: 6px; }
-    .price-list strong { text-align: left; }
-    .price-actions { align-items: stretch; flex-direction: column; }
 }
 @media (max-width: 620px) {
     .home-page .hero { padding: 62px 6%; }
