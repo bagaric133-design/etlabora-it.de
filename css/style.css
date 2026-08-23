@@ -122,6 +122,7 @@ p { line-height: 1.65; }
 
 .page-hero { background: linear-gradient(90deg, rgba(3,17,38,.96), rgba(3,17,38,.76)), url('../images/server.png'); background-position: center; background-size: cover; color: #fff; min-height: 380px; padding: 110px 8% 80px; }
 .page-hero h1, .page-hero p { max-width: 820px; }
+.page-hero > .label { color: var(--cyan); }
 .services-bg, .server-bg { background-image: linear-gradient(90deg, rgba(3,17,38,.96), rgba(3,17,38,.76)), url('../images/server.png'); }
 .about-bg, .office-bg { background-image: linear-gradient(90deg, rgba(3,17,38,.96), rgba(3,17,38,.72)), url('../images/office.png'); }
 .cloud-bg { background-image: linear-gradient(90deg, rgba(3,17,38,.96), rgba(3,17,38,.72)), url('../images/cloud.png'); }
