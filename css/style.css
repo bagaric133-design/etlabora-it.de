@@ -979,7 +979,7 @@ p { line-height: 1.65; }
 .home-trustbar { align-items: center; background: var(--home-night); color: #8fa5bd; display: flex; flex-wrap: wrap; font-size: 11px; font-weight: 900; gap: 25px; justify-content: center; letter-spacing: .12em; padding: 24px 5%; text-transform: uppercase; }
 .home-trustbar i { background: rgba(255,255,255,.2); border-radius: 50%; height: 3px; width: 3px; }
 .home-page .services-section { background: #f6f8fb; padding-bottom: 100px; padding-top: 110px; }
-.home-page .services-section > h2 { letter-spacing: -.035em; margin-left: auto; margin-right: auto; max-width: 780px; }
+.home-page .services-section > h2 { letter-spacing: -.035em; margin-left: auto; margin-right: auto; max-width: 1200px; }
 .home-page .cards { gap: 24px; max-width: 1320px; }
 .home-page .card {
     align-items: center;
