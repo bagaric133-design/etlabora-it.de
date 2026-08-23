@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="service-support.html">Service & Support</a>
                     </div>
                 </div>
-                <a href="preise.html">Preise</a>
+                <!-- Preisseite vorübergehend ausgeblendet. Zum Reaktivieren hier wieder ergänzen: <a href="preise.html">Preise</a> -->
                 <a href="kontakt.html">Kontakt</a>
                 <a href="remote.html">Fernwartung</a>
                 <a href="ueber-uns.html">Über uns</a>
