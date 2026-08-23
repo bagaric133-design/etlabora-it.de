@@ -1012,11 +1012,22 @@ p { line-height: 1.65; }
 .home-page .card p { font-size: 16px; line-height: 1.65; }
 .home-page .card-arrow { align-items: center; background: #0877ed; border-radius: 50%; bottom: 22px; box-shadow: 0 7px 15px rgba(8,119,237,.24); color: #fff; display: flex; font-size: 22px; height: 44px; justify-content: center; position: absolute; right: 24px; transition: background .25s ease, transform .25s ease; width: 44px; }
 .home-page .card:hover .card-arrow { background: #0565cc; transform: translateX(4px); }
-.home-page .advantages { background: var(--home-night); color: #fff; padding-bottom: 100px; padding-top: 100px; }
-.home-page .advantages > div:first-child p { color: #9eb1c8; }
-.home-page .advantage-grid { gap: 0; }
-.home-page .advantage-grid div { border-left-color: rgba(92,225,230,.55); padding: 22px 20px 22px 24px; }
-.home-page .advantage-grid p { color: #9eb1c8; }
+.home-page .advantages { background: radial-gradient(circle at 50% 0, rgba(22,136,255,.2), transparent 38%), linear-gradient(145deg, #03152c, #020b19 72%); color: #fff; display: block; overflow: hidden; padding: 92px 7% 100px; position: relative; text-align: center; }
+.home-page .advantages::before { background-image: linear-gradient(rgba(92,225,230,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(92,225,230,.045) 1px, transparent 1px); background-size: 34px 34px; content: ''; inset: 0; mask-image: linear-gradient(to bottom, transparent, #000 32%, #000); pointer-events: none; position: absolute; }
+.home-page .advantages::after { background: linear-gradient(90deg, transparent, rgba(92,225,230,.75), transparent); bottom: 0; box-shadow: 0 0 22px rgba(92,225,230,.55); content: ''; height: 1px; left: 6%; position: absolute; right: 6%; }
+.home-page .advantages-heading { margin: 0 auto 38px; max-width: 820px; position: relative; z-index: 1; }
+.home-page .advantages-heading .label { color: var(--home-cyan); margin-bottom: 12px; }
+.home-page .advantages-heading h2 { font-size: clamp(32px,3.4vw,48px); letter-spacing: -.035em; margin-bottom: 12px; }
+.home-page .advantages-heading > p:not(.label) { color: #a9bdd4; font-size: 17px; margin: 0 auto; max-width: 720px; }
+.home-page .advantage-grid { display: grid; gap: 20px; grid-template-columns: repeat(4,minmax(0,1fr)); margin: 0 auto; max-width: 1320px; position: relative; text-align: left; z-index: 1; }
+.home-page .advantage-card { background: linear-gradient(145deg, rgba(9,38,73,.9), rgba(3,19,39,.96)); border: 1px solid rgba(62,191,255,.8); border-radius: 14px; box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 18px 45px rgba(0,0,0,.22); min-height: 230px; padding: 24px; position: relative; transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease; }
+.home-page .advantage-card::before { background: linear-gradient(90deg, transparent, #5ce1e6, transparent); content: ''; height: 2px; left: 18%; opacity: .8; position: absolute; right: 18%; top: -1px; }
+.home-page .advantage-card:hover { border-color: #5ce1e6; box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 22px 52px rgba(8,119,255,.22); transform: translateY(-5px); }
+.home-page .advantage-icon { display: block; height: 56px; margin-bottom: 18px; width: 56px; }
+.home-page .advantage-icon svg { fill: none; height: 100%; stroke: #d9f7ff; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; width: 100%; }
+.home-page .advantage-icon .icon-surface { fill: #096fe4; stroke: #1688ff; }
+.home-page .advantage-card h3 { color: #fff; font-size: 19px; line-height: 1.3; margin-bottom: 10px; }
+.home-page .advantage-card p { color: #9eb5ce; font-size: 15px; line-height: 1.6; }
 .home-process { background: #fff; display: grid; gap: 90px; grid-template-columns: .9fr 1.1fr; padding: 110px 8%; }
 .process-heading { max-width: 540px; }
 .process-heading h2 { letter-spacing: -.035em; }
@@ -1042,6 +1053,7 @@ p { line-height: 1.65; }
     .home-page .header-actions { margin-left: auto; width: auto; }
     .home-page .hero { grid-template-columns: 1fr; min-height: auto; padding-bottom: 76px; padding-top: 76px; }
     .home-process { gap: 50px; grid-template-columns: 1fr; padding: 85px 6%; }
+    .home-page .advantage-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
     .home-page .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .home-page .card { grid-template-columns: 114px minmax(0, 1fr); min-height: 240px; padding: 28px 24px; }
     .home-page .card-icon { height: 110px; width: 110px; }
@@ -1068,6 +1080,10 @@ p { line-height: 1.65; }
     .home-page .hero h1 { line-height: 1.01; }
     .home-page .hero-buttons .btn { width: 100%; }
     .home-page .services-section { padding-bottom: 75px; padding-top: 75px; }
+    .home-page .advantages { padding: 72px 6%; }
+    .home-page .advantages-heading { margin-bottom: 30px; }
+    .home-page .advantage-grid { grid-template-columns: 1fr; }
+    .home-page .advantage-card { min-height: 0; padding: 22px; }
     .home-page .cards { gap: 18px; grid-template-columns: 1fr; }
     .home-page .card { gap: 16px; grid-template-columns: 100px minmax(0, 1fr); min-height: 220px; padding: 26px 20px 30px; }
     .home-page .card-icon { height: 96px; width: 96px; }
@@ -1290,11 +1306,13 @@ p { line-height: 1.65; }
 @media (prefers-reduced-motion: reduce) {
     .home-page .card,
     .home-page .card-icon,
-    .home-page .card-arrow { transition: none; }
+    .home-page .card-arrow,
+    .home-page .advantage-card { transition: none; }
     .home-page .card:hover,
     .home-page .card:active,
     .home-page .card:hover .card-icon,
-    .home-page .card:hover .card-arrow { transform: none; }
+    .home-page .card:hover .card-arrow,
+    .home-page .advantage-card:hover { transform: none; }
     .mobile-drawer,
     .mobile-menu-overlay,
     .mobile-submenu { transition: none; }
