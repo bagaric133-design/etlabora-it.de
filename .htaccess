@@ -1,0 +1,4 @@
+# Permanent redirects for retired test and copy pages.
+RedirectMatch 301 ^/kopie-von-privatkunden(?:\.html)?/?$ https://www.etlabora-it.de/
+RedirectMatch 301 ^/kopie-von-unternehmen(?:\.html)?/?$ https://www.etlabora-it.de/leistungen.html
+RedirectMatch 301 ^/kopie-von-[^/?]+(?:\.html)?/?$ https://www.etlabora-it.de/
