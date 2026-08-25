@@ -968,8 +968,9 @@ p { line-height: 1.65; }
 .home-page .hero::before { background: linear-gradient(90deg, rgba(2,11,25,.84), rgba(2,11,25,.46)), url('../images/hero.png') center / cover; content: ''; inset: 0; opacity: .42; position: absolute; }
 .home-page .hero::after { background: radial-gradient(circle, rgba(0,141,255,.2), transparent 67%); content: ''; height: 760px; pointer-events: none; position: absolute; right: -40px; top: 42px; width: 760px; }
 .home-page .hero-content { max-width: 690px; position: relative; z-index: 2; }
-.home-page .hero h1 { font-size: clamp(48px, 4.7vw, 74px); letter-spacing: -.052em; line-height: .96; margin: 24px 0 24px; max-width: 680px; }
-.home-page .hero h1 em { color: var(--home-cyan); font-style: normal; }
+.home-page .seo-h1 { clip: rect(0 0 0 0); clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; white-space: nowrap; width: 1px; }
+.home-page .hero-title { color: #fff; font-size: clamp(48px, 4.7vw, 74px); letter-spacing: -.052em; line-height: .96; margin: 24px 0 24px; max-width: 680px; }
+.home-page .hero-title em { color: var(--home-cyan); font-style: normal; }
 .home-page .hero-text { color: #c0cde0; font-size: clamp(15px, 1.1vw, 18px); line-height: 1.65; max-width: 660px; }
 .home-page .hero-buttons { gap: 14px; margin-top: 30px; }
 .home-page .hero-buttons .btn { min-height: 54px; padding: 0 25px; white-space: nowrap; }
@@ -1118,11 +1119,11 @@ p { line-height: 1.65; }
     .home-page.menu-open .header .nav { display: flex; }
     .home-page .header .nav > a, .home-page .header .dropdown { margin: 0; padding: 13px 0; width: 100%; }
     .home-page .dropdown-menu { display: none !important; }
-    .home-page .hero h1 { font-size: clamp(42px, 12vw, 62px); }
+    .home-page .hero-title { font-size: clamp(42px, 12vw, 62px); }
 }
 @media (max-width: 620px) {
     .home-page .hero { gap: 18px; padding: 102px 5% 14px; }
-    .home-page .hero h1 { line-height: 1.01; }
+    .home-page .hero-title { line-height: 1.01; }
     .home-page .hero-buttons .btn { width: 100%; }
     .home-page .hero-visual { min-height: 290px; }
     .home-page .hero-visual img { height: auto; max-height: 390px; width: 100%; }
