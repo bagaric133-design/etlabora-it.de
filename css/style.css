@@ -1424,3 +1424,13 @@ p { line-height: 1.65; }
     .services-page .card, .services-page .card-icon, .services-page .card-arrow { transition: none; }
     .services-page .card:hover, .services-page .card:hover .card-icon, .services-page .card:hover .card-arrow { transform: none; }
 }
+
+/* Startseite: Rahmen/Kasten um Logo und Menü entfernt */
+.home-page .header {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
