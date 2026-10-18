@@ -1434,3 +1434,11 @@ p { line-height: 1.65; }
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
 }
+
+/* Startseite: Hero-Buttons schmaler und gleich breit */
+.home-page .hero-buttons .btn { min-height: 48px; padding: 0 20px; width: 250px; font-size: 14px; }
+.home-page .hero-buttons .primary span { font-size: 18px; margin-left: 10px; }
+@media (max-width: 760px) {
+    .home-page .hero-buttons { align-items: center; flex-direction: column; gap: 12px; }
+    .home-page .hero-buttons .btn { max-width: 100%; width: 250px; }
+}
