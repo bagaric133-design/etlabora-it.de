@@ -1487,3 +1487,19 @@ p { line-height: 1.65; }
     .situations details p { font-size: 15px; padding: 14px 16px 18px; }
 }
 .situations-cta .btn { max-width: 100%; width: 250px; }
+
+/* Handy: Leistungskarten kompakter */
+@media (max-width: 620px) {
+    .home-page .cards, .services-page .cards { gap: 12px; }
+    .home-page .card, .services-page .card { align-items: center; gap: 14px; grid-template-columns: 64px minmax(0, 1fr) 34px; min-height: 0; padding: 16px 16px; border-radius: 18px; }
+    .home-page .card-icon, .home-page .card-icon-image,
+    .services-page .card-icon, .services-page .card-icon-image { height: 64px; width: 64px; }
+    .home-page .card-copy, .services-page .card-copy { padding-bottom: 0; }
+    .home-page .card h3, .services-page .card h3 { font-size: 17px; margin: 0 0 4px; }
+    .home-page .card p, .services-page .card p { font-size: 14px; line-height: 1.45; }
+    .home-page .card-arrow, .services-page .card-arrow { font-size: 17px; height: 34px; position: static; width: 34px; }
+}
+@media (max-width: 620px) {
+    .home-page .card .card-icon, .services-page .card .card-icon { flex: 0 0 64px; height: 64px; max-width: 64px; min-width: 64px; overflow: hidden; width: 64px; }
+    .home-page .card .card-icon img, .services-page .card .card-icon img { height: 64px; object-fit: contain; width: 64px; }
+}
