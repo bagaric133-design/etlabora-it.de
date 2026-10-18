@@ -1512,3 +1512,11 @@ p { line-height: 1.65; }
     .home-page .advantage-card h3 { align-self: end; font-size: 17px; margin: 0 0 3px; }
     .home-page .advantage-card p { font-size: 14px; line-height: 1.45; margin: 0; }
 }
+
+/* Vorteile: moderne Symbole */
+.home-page .advantage-icon { align-items: center; background: linear-gradient(145deg, rgba(22,136,255,.28), rgba(92,225,230,.12)); border: 1px solid rgba(92,225,230,.45); border-radius: 14px; box-shadow: 0 0 0 4px rgba(22,136,255,.07), 0 10px 26px rgba(22,136,255,.28), inset 0 1px 0 rgba(255,255,255,.18); display: flex; height: 52px; justify-content: center; width: 52px; }
+.home-page .advantage-icon svg { fill: none; filter: drop-shadow(0 0 6px rgba(92,225,230,.55)); height: 26px; stroke: #e8fbff; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.9; width: 26px; }
+@media (max-width: 620px) {
+    .home-page .advantage-icon { border-radius: 12px; height: 44px; width: 44px; }
+    .home-page .advantage-icon svg { height: 22px; width: 22px; }
+}
