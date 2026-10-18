@@ -1503,3 +1503,12 @@ p { line-height: 1.65; }
     .home-page .card .card-icon, .services-page .card .card-icon { flex: 0 0 64px; height: 64px; max-width: 64px; min-width: 64px; overflow: hidden; width: 64px; }
     .home-page .card .card-icon img, .services-page .card .card-icon img { height: 64px; object-fit: contain; width: 64px; }
 }
+
+/* Handy: Vorteile kompakter (Symbol links, Text rechts) */
+@media (max-width: 620px) {
+    .home-page .advantage-grid { gap: 12px; }
+    .home-page .advantage-card { column-gap: 14px; display: grid; grid-template-columns: 44px minmax(0, 1fr); padding: 16px; }
+    .home-page .advantage-icon { grid-row: span 2; height: 44px; margin: 0; width: 44px; }
+    .home-page .advantage-card h3 { align-self: end; font-size: 17px; margin: 0 0 3px; }
+    .home-page .advantage-card p { font-size: 14px; line-height: 1.45; margin: 0; }
+}
