@@ -1461,3 +1461,29 @@ p { line-height: 1.65; }
     .submenu-open .mobile-submenu a { padding: 12px 16px; }
     .mobile-submenu a:active { background: rgba(8, 119, 255, .08); color: var(--blue); }
 }
+
+/* Startseite: "Finden Sie sich hier wieder?" */
+.situations { background: #020b19; color: #fff; padding: 90px 6%; }
+.situations-head { margin: 0 auto 36px; max-width: 760px; text-align: center; }
+.situations-head .label { color: #5ce1e6; font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.situations-head h2 { color: #fff; font-size: clamp(30px, 4vw, 46px); line-height: 1.1; margin: 10px 0 14px; }
+.situations-head p:last-child { color: rgba(255,255,255,.68); font-size: 16px; line-height: 1.6; }
+.situations-list { display: grid; gap: 12px; margin: 0 auto; max-width: 860px; }
+.situations details { background: rgba(255,255,255,.04); border: 1px solid rgba(152,203,255,.16); border-radius: 14px; overflow: hidden; transition: background .2s ease, border-color .2s ease; }
+.situations details[open] { background: rgba(22,136,255,.09); border-color: rgba(92,225,230,.4); }
+.situations summary { align-items: center; cursor: pointer; display: flex; font-size: 17px; font-weight: 700; gap: 16px; justify-content: space-between; line-height: 1.4; list-style: none; padding: 20px 22px; }
+.situations summary::-webkit-details-marker { display: none; }
+.situations summary::after { align-items: center; background: linear-gradient(135deg, #1688ff, #096de0); border-radius: 10px; content: "+"; display: flex; flex: 0 0 36px; font-size: 22px; font-weight: 400; height: 36px; justify-content: center; transition: transform .2s ease; }
+.situations details[open] summary::after { content: "−"; }
+.situations summary:focus-visible { outline: 2px solid #5ce1e6; outline-offset: -2px; }
+.situations details p { border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.72); font-size: 15.5px; line-height: 1.7; margin: 0; padding: 16px 22px 22px; }
+.situations-cta { align-items: center; display: flex; flex-direction: column; gap: 14px; margin-top: 36px; }
+.situations-cta p { color: rgba(255,255,255,.7); margin: 0; }
+.situations-cta .btn { background: linear-gradient(135deg, #1688ff, #096de0); border-radius: 12px; color: #fff; min-height: 48px; padding: 0 24px; }
+.situations-cta .btn span { margin-left: 10px; }
+@media (max-width: 760px) {
+    .situations { padding: 64px 5%; }
+    .situations summary { font-size: 16px; padding: 16px 16px; }
+    .situations details p { font-size: 15px; padding: 14px 16px 18px; }
+}
+.situations-cta .btn { max-width: 100%; width: 250px; }
