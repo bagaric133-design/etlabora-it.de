@@ -1552,3 +1552,57 @@ p { line-height: 1.65; }
     .cf-row { grid-template-columns: 1fr; }
     .cf-submit { justify-self: stretch; }
 }
+
+/* SEO-Inhalte: Leistungs- und Ortsseiten */
+.seo-block { background: #fff; color: var(--ink); display: grid; gap: 56px; padding: 76px 8%; }
+.seo-block > * { margin: 0 auto; max-width: 1180px; width: 100%; }
+.seo-block .label { color: var(--blue); }
+.seo-block h2 { font-size: clamp(26px, 3vw, 38px); letter-spacing: -.03em; line-height: 1.15; margin: 8px 0 16px; }
+.seo-block h3 { font-size: 18px; line-height: 1.3; }
+.seo-block p { color: var(--muted); line-height: 1.7; }
+.seo-wrap { align-items: start; display: grid; gap: 44px; grid-template-columns: 1.25fr .9fr; }
+.seo-intro p + p { margin-top: 14px; }
+.seo-signs { background: var(--soft); border: 1px solid var(--line); border-radius: 16px; padding: 26px; }
+.seo-signs h3 { margin-bottom: 14px; }
+.seo-signs ul { display: grid; gap: 10px; list-style: none; margin: 0; padding: 0; }
+.seo-signs li { color: var(--ink); line-height: 1.5; padding-left: 28px; position: relative; }
+.seo-signs li::before { background: var(--blue); border-radius: 50%; color: #fff; content: "✓"; display: grid; font-size: 11px; font-weight: 900; height: 18px; left: 0; place-items: center; position: absolute; top: 3px; width: 18px; }
+.seo-steps ol { counter-reset: none; display: grid; gap: 16px; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style: none; margin: 0; padding: 0; }
+.seo-steps li { background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 14px 34px rgba(7,22,45,.05); display: grid; gap: 12px; padding: 22px; }
+.seo-step-no { align-items: center; background: linear-gradient(135deg, #1688ff, #096de0); border-radius: 10px; color: #fff; display: flex; font-weight: 900; height: 36px; justify-content: center; width: 36px; }
+.seo-steps h3 { margin-bottom: 6px; }
+.seo-steps p { font-size: 15px; line-height: 1.55; }
+.seo-faq { max-width: 900px !important; }
+.seo-faq details { border-bottom: 1px solid var(--line); }
+.seo-faq summary { align-items: center; cursor: pointer; display: flex; font-size: 17px; font-weight: 800; gap: 16px; justify-content: space-between; list-style: none; padding: 20px 2px; }
+.seo-faq summary::-webkit-details-marker { display: none; }
+.seo-faq summary::after { color: var(--blue); content: "+"; flex: 0 0 auto; font-size: 24px; font-weight: 400; }
+.seo-faq details[open] summary::after { content: "−"; }
+.seo-faq details p { padding: 0 2px 20px; }
+.seo-areas { background: var(--navy); border-radius: 18px; color: #fff; padding: 30px; text-align: center; }
+.seo-areas h3 { color: #fff; font-size: 22px; margin-bottom: 6px; }
+.seo-areas p { color: #a9bdd4; margin-bottom: 18px; }
+.seo-chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.seo-chips a { background: rgba(255,255,255,.06); border: 1px solid rgba(92,225,230,.35); border-radius: 999px; color: #fff; font-size: 14px; font-weight: 700; padding: 9px 16px; transition: background .2s ease, border-color .2s ease; }
+.seo-chips a:hover, .seo-chips a[aria-current="page"] { background: var(--blue); border-color: var(--blue); }
+.seo-block-areas { background: var(--soft); padding-bottom: 56px; padding-top: 56px; }
+.seo-services { display: grid; gap: 14px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.seo-service { background: var(--soft); border: 1px solid var(--line); border-radius: 16px; display: grid; gap: 6px; padding: 20px 22px; position: relative; transition: border-color .2s ease, transform .2s ease; }
+.seo-service:hover { border-color: var(--blue); transform: translateY(-3px); }
+.seo-service p { font-size: 14.5px; line-height: 1.5; padding-right: 26px; }
+.seo-service span { bottom: 18px; color: var(--blue); font-size: 20px; position: absolute; right: 20px; }
+.seo-focus { background: linear-gradient(135deg, #eaf4ff, #f4f8fd); border-left: 4px solid var(--blue); border-radius: 0 16px 16px 0; padding: 28px 30px; }
+.seo-focus h2 { font-size: clamp(22px, 2.4vw, 28px); margin-top: 0; }
+@media (max-width: 980px) {
+    .seo-wrap { grid-template-columns: 1fr; gap: 26px; }
+    .seo-steps ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .seo-services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+    .seo-block { gap: 40px; padding: 52px 5%; }
+    .seo-steps ol, .seo-services { grid-template-columns: 1fr; }
+    .seo-steps li { align-items: start; gap: 14px; grid-template-columns: 36px 1fr; padding: 16px; }
+    .seo-faq summary { font-size: 16px; padding: 16px 2px; }
+    .seo-signs, .seo-areas, .seo-focus { padding: 22px 18px; }
+    .seo-chips a { font-size: 13px; padding: 8px 13px; }
+}
