@@ -1658,3 +1658,56 @@ p { line-height: 1.65; }
     .remote-safety { padding: 0 5% 52px; }
     .remote-safety-box { padding: 22px 18px; }
 }
+
+/* Fernwartung: modernes dunkles Design */
+.remote-section { background: radial-gradient(circle at 50% 0, rgba(22,136,255,.22), transparent 42%), linear-gradient(160deg, #03152c, #020b19 70%); color: #fff; overflow: hidden; position: relative; }
+.remote-section::before { background-image: linear-gradient(rgba(92,225,230,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(92,225,230,.04) 1px, transparent 1px); background-size: 34px 34px; content: ''; inset: 0; mask-image: linear-gradient(to bottom, transparent, #000 25%, #000); pointer-events: none; position: absolute; }
+.remote-section > * { position: relative; }
+.remote-section .label { color: #5ce1e6; }
+.remote-section h2 { color: #fff; letter-spacing: -.03em; }
+
+/* Schritte als Zeitleiste */
+.remote-quick { counter-reset: none; gap: 0; position: relative; }
+.remote-quick::before { background: linear-gradient(90deg, transparent, rgba(92,225,230,.55), transparent); content: ''; height: 2px; left: 12%; position: absolute; right: 12%; top: 27px; }
+.remote-quick li { align-items: center; background: none; border: 0; flex-direction: column; gap: 12px; padding: 0 12px; position: relative; text-align: center; }
+.remote-quick li > span { background: linear-gradient(145deg, #1688ff, #0a5fd0); border: 1px solid rgba(92,225,230,.55); border-radius: 16px; box-shadow: 0 0 0 6px rgba(22,136,255,.12), 0 12px 30px rgba(22,136,255,.35); flex: 0 0 auto; font-size: 18px; height: 54px; width: 54px; }
+.remote-quick strong { color: #fff; font-size: 16px; }
+.remote-quick small { color: #9eb5ce; font-size: 14px; }
+
+/* Karten als Glas-Kacheln */
+.remote-card { backdrop-filter: blur(10px); background: linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.025)); border: 1px solid rgba(152,203,255,.18); box-shadow: 0 24px 60px rgba(0,0,0,.28); overflow: hidden; position: relative; }
+.remote-card::before { content: ''; height: 3px; left: 0; position: absolute; right: 0; top: 0; }
+.teamviewer-card::before { background: linear-gradient(90deg, #0e8ee9, #5ce1e6); }
+.anydesk-card::before { background: linear-gradient(90deg, #ef443b, #ff8a65); }
+.remote-card::after { border-radius: 50%; content: ''; filter: blur(60px); height: 180px; opacity: .35; pointer-events: none; position: absolute; right: -60px; top: -60px; width: 180px; }
+.teamviewer-card::after { background: #0e8ee9; }
+.anydesk-card::after { background: #ef443b; }
+.remote-brand { background: #fff; border-radius: 12px; padding: 8px 14px; position: relative; width: max-content; z-index: 1; }
+.remote-brand svg { height: 32px !important; }
+.remote-card p { color: #b9cade; position: relative; }
+.remote-card ul { position: relative; }
+.remote-card li { align-items: center; color: #dce8f5; display: flex; gap: 10px; }
+.remote-card li::before { align-items: center; background: rgba(92,225,230,.15); border: 1px solid rgba(92,225,230,.45); border-radius: 50%; color: #5ce1e6; content: '✓'; display: inline-flex; flex: 0 0 20px; font-size: 11px; height: 20px; justify-content: center; }
+.remote-card:hover { box-shadow: 0 28px 70px rgba(0,0,0,.35); }
+.teamviewer-card:hover { border-color: rgba(14,142,233,.7); }
+.anydesk-card:hover { border-color: rgba(239,68,59,.7); }
+.remote-dl { position: relative; }
+.remote-dl-mac { color: #9eb5ce; }
+.remote-dl-mac:hover { color: #fff; }
+.remote-call .btn.primary { background: #fff; box-shadow: none; color: var(--home-night, #020b19); }
+
+.remote-safety { background: #020b19; padding-top: 0; }
+.remote-safety-box { background: linear-gradient(145deg, rgba(9,38,73,.9), rgba(3,19,39,.96)); border: 1px solid rgba(62,191,255,.35); }
+
+@media (max-width: 760px) {
+    .remote-quick { gap: 18px; padding-left: 4px; }
+    .remote-quick::before { background: linear-gradient(180deg, rgba(92,225,230,.55), rgba(92,225,230,.1)); bottom: 20px; height: auto; left: 27px; right: auto; top: 20px; width: 2px; }
+    .remote-quick li { flex-direction: row; gap: 16px; padding: 0; text-align: left; }
+    .remote-quick li > span { font-size: 16px; height: 46px; width: 46px; border-radius: 14px; }
+    .remote-quick li:first-child, .remote-quick li:last-child { padding: 0; }
+}
+@media (max-width: 620px) {
+    .remote-brand { padding: 6px 12px; }
+    .remote-brand svg { height: 28px !important; }
+}
+.remote-brand svg { width: auto !important; }
