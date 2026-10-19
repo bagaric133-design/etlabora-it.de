@@ -2,7 +2,7 @@
 // Sobald ein Web3Forms-Zugangsschlüssel eingetragen ist, werden Anfragen direkt per E-Mail zugestellt.
 // Ohne Schlüssel öffnet das Formular das E-Mail-Programm mit vorausgefüllter Nachricht.
 (() => {
-    const WEB3FORMS_KEY = '';
+    const WEB3FORMS_KEY = 'af137e3b-abfb-4e5a-9716-3557a55e8258';
     const MAIL_TO = 'info@etlabora-it.de';
 
     const form = document.getElementById('contact-form');
