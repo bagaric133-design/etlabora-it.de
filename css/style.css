@@ -1606,3 +1606,9 @@ p { line-height: 1.65; }
     .seo-signs, .seo-areas, .seo-focus { padding: 22px 18px; }
     .seo-chips a { font-size: 13px; padding: 8px 13px; }
 }
+
+/* Handy: Hero-Bild ausblenden, damit die Leistungen direkt folgen */
+@media (max-width: 620px) {
+    .home-page .hero-visual { display: none; }
+    .home-page .hero { padding-bottom: 28px; }
+}
