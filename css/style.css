@@ -1615,3 +1615,46 @@ p { line-height: 1.65; }
 @media (max-width: 620px) {
     .home-page .home-trustbar { display: none; }
 }
+
+/* Fernwartung neu */
+.visually-hidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; white-space: nowrap; width: 1px; }
+.remote-quick { display: grid; gap: 14px; grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; margin: 34px auto 0; max-width: 980px; padding: 0; text-align: left; }
+.remote-quick li { align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 14px; display: flex; gap: 14px; padding: 16px 18px; }
+.remote-quick li > span { align-items: center; background: linear-gradient(135deg, #1688ff, #096de0); border-radius: 10px; color: #fff; display: flex; flex: 0 0 36px; font-weight: 900; height: 36px; justify-content: center; }
+.remote-quick strong { color: var(--ink); display: block; font-size: 15.5px; }
+.remote-quick small { color: var(--muted); font-size: 13.5px; }
+.remote-tools { margin-top: 26px; }
+.remote-card { border-radius: 18px; display: flex; flex-direction: column; padding: 28px; transition: border-color .2s ease, transform .2s ease; }
+.remote-card:hover { transform: translateY(-3px); }
+.teamviewer-card:hover { border-color: #0e8ee9; }
+.anydesk-card:hover { border-color: #ef443b; }
+.remote-card ul { margin: 16px 0 22px; }
+.remote-dl { display: grid; gap: 10px; margin-top: auto; }
+.remote-dl .btn { border-radius: 12px; min-height: 50px; width: 100%; }
+.teamviewer-card .btn.primary { background: #0e8ee9; box-shadow: 0 12px 26px rgba(14,142,233,.25); }
+.anydesk-card .btn.primary { background: #ef443b; box-shadow: 0 12px 26px rgba(239,68,59,.25); }
+.remote-dl-mac { color: var(--muted); font-size: 14px; font-weight: 700; text-align: center; }
+.remote-dl-mac:hover { color: var(--ink); }
+.remote-call { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 30px; }
+.remote-call .btn { border-radius: 12px; min-height: 50px; }
+.remote-wa { background: #25d366; color: #fff; }
+.remote-safety { background: var(--soft); padding: 0 8% 70px; }
+.remote-safety-box { background: var(--navy); border-radius: 18px; color: #fff; margin: 0 auto; max-width: 980px; padding: 30px 32px; }
+.remote-safety-box h2 { color: #fff; font-size: clamp(22px, 2.5vw, 28px); margin-bottom: 14px; }
+.remote-safety-box ul { display: grid; gap: 10px; list-style: none; margin: 0; padding: 0; }
+.remote-safety-box li { color: #c4d4e6; line-height: 1.55; padding-left: 28px; position: relative; }
+.remote-safety-box li::before { color: #5ce1e6; content: "🛡"; left: 0; position: absolute; }
+@media (max-width: 760px) {
+    .remote-quick { grid-template-columns: 1fr; gap: 10px; }
+    .remote-quick li { padding: 12px 14px; }
+}
+@media (max-width: 620px) {
+    .remote-card { padding: 20px; }
+    .remote-brand { height: 40px; margin-bottom: 12px; }
+    .remote-brand svg { height: 40px; }
+    .remote-card p, .remote-card li { font-size: 15px; }
+    .remote-call { flex-direction: column; }
+    .remote-call .btn { width: 100%; }
+    .remote-safety { padding: 0 5% 52px; }
+    .remote-safety-box { padding: 22px 18px; }
+}
