@@ -2014,3 +2014,11 @@ body:not(.home-page) .remote-call .btn.primary { background: #fff; box-shadow: n
 .ct-cal { border-color: rgba(139,92,246,.45); }
 .ct-cal:hover { border-color: rgba(139,92,246,.9); }
 .home-page .cta-band-action .cta-secondary { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.3); box-shadow: none; color: #fff; justify-content: center; min-height: 52px; width: 100%; }
+
+/* Instagram-Link */
+.footer-ig { align-items: center; display: inline-flex !important; gap: 10px; }
+.footer-ig svg { fill: none; height: 20px; stroke: #e1306c; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; width: 20px; }
+.footer-ig:hover svg { stroke: #ff6fa0; }
+.home-page .footer-contact .footer-ig svg { stroke: #e1306c; }
+.ct-ig .ct-icon { background: linear-gradient(145deg, #f58529, #dd2a7b 55%, #8134af); box-shadow: 0 10px 24px rgba(221,42,123,.35); }
+.ct-ig:hover { border-color: rgba(221,42,123,.8); }
