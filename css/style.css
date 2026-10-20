@@ -1994,16 +1994,6 @@ body:not(.home-page) .remote-call .btn.primary { background: #fff; box-shadow: n
 @keyframes chatDot { 0%,80%,100% { opacity: .35; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-3px); } }
 .ai-chatbot-messages { max-height: min(380px, 52vh); }
 
-/* Handy: Chat und WhatsApp nebeneinander, kleiner */
-@media (max-width: 760px) {
-    .whatsapp-float { bottom: 16px; height: 46px; right: 16px; width: 46px; }
-    .whatsapp-float .wa-icon, .whatsapp-float .wa-icon svg { height: 24px; width: 24px; }
-    .ai-chatbot { bottom: 16px; right: 72px; }
-    .ai-chatbot-toggle { height: 46px; width: 46px; }
-    .ai-chatbot-toggle::before { height: 22px; width: 22px; }
-    .ai-chatbot-dot { height: 9px; right: 4px; top: 4px; width: 9px; }
-    .ai-chatbot-panel { bottom: 58px; right: -60px; }
-}
 
 /* Handy: Hero-Buttons nebeneinander und kleiner */
 @media (max-width: 620px) {
