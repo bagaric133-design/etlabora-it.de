@@ -1978,3 +1978,18 @@ body:not(.home-page) .remote-call .btn.primary { background: #fff; box-shadow: n
     .ai-chatbot-dot { position: absolute; right: 6px; top: 6px; height: 11px; width: 11px; border: 2px solid #0a6fe0; }
     .ai-chatbot-panel { bottom: 66px; right: -4px; width: calc(100vw - 24px); }
 }
+
+/* Chat-Assistent: Links, Aktionen, Tipp-Animation */
+.ai-message p { margin: 0; }
+.ai-links { border-top: 1px solid var(--line); display: grid; gap: 6px; margin-top: 10px; padding-top: 10px; }
+.ai-links a { color: var(--blue); font-size: 13.5px; font-weight: 700; }
+.ai-links a:hover { text-decoration: underline; }
+.ai-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.ai-actions a { background: #eaf4ff; border-radius: 999px; color: var(--blue); font-size: 12.5px; font-weight: 800; padding: 6px 11px; }
+.ai-actions a:hover { background: var(--blue); color: #fff; }
+.ai-message.typing { align-items: center; display: flex; gap: 4px; padding: 14px 16px; }
+.ai-message.typing span { animation: chatDot 1s infinite ease-in-out; background: #9eb5ce; border-radius: 50%; height: 7px; width: 7px; }
+.ai-message.typing span:nth-child(2) { animation-delay: .15s; }
+.ai-message.typing span:nth-child(3) { animation-delay: .3s; }
+@keyframes chatDot { 0%,80%,100% { opacity: .35; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-3px); } }
+.ai-chatbot-messages { max-height: min(380px, 52vh); }
