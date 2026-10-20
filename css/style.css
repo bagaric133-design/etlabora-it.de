@@ -2008,3 +2008,9 @@ body:not(.home-page) .remote-call .btn.primary { background: #fff; box-shadow: n
 @media (max-width: 380px) {
     .home-page .hero-buttons .btn { font-size: 12px; line-height: 1.2; padding: 0 6px; text-align: center; white-space: normal; }
 }
+
+/* Online-Terminbuchung */
+.ct-cal .ct-icon { background: linear-gradient(145deg, #8b5cf6, #5b3fd6); box-shadow: 0 10px 24px rgba(139,92,246,.4); }
+.ct-cal { border-color: rgba(139,92,246,.45); }
+.ct-cal:hover { border-color: rgba(139,92,246,.9); }
+.home-page .cta-band-action .cta-secondary { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.3); box-shadow: none; color: #fff; justify-content: center; min-height: 52px; width: 100%; }

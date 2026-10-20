@@ -118,8 +118,8 @@
     const A = {
         greet: { text: 'Hallo! 👋 Ich bin der Assistent von Etlabora IT. Fragen Sie mich gern zu Microsoft 365, Netzwerk & WLAN, IT-Sicherheit, Backup oder Fernwartung – oder schildern Sie einfach Ihr Problem.', chips: ['Welche Leistungen?', 'Was kostet das?', 'Fernwartung starten'] },
         thanks: { text: 'Sehr gern! Wenn Sie möchten, melden Sie sich einfach direkt – das erste Gespräch ist kostenlos.', actions: ['call', 'wa'] },
-        contact: { text: `Sie erreichen Etlabora IT direkt per Telefon unter ${PHONE}, per WhatsApp oder per E-Mail an ${MAIL}. Sie sprechen immer mit Ihrem persönlichen Ansprechpartner.`, actions: ['call', 'wa', 'mail', 'form'] },
-        price: { text: 'Die Kosten hängen vom Umfang ab – deshalb besprechen wir den Aufwand immer vorher mit Ihnen, ohne Überraschungen auf der Rechnung. Die Erstberatung ist kostenlos. Schildern Sie kurz Ihr Anliegen, dann bekommen Sie eine klare Einschätzung.', actions: ['wa', 'form'] },
+        contact: { text: `Sie erreichen Etlabora IT direkt per Telefon unter ${PHONE}, per WhatsApp oder per E-Mail an ${MAIL}. Sie sprechen immer mit Ihrem persönlichen Ansprechpartner.`, actions: ['cal', 'call', 'wa', 'mail'] },
+        price: { text: 'Die Kosten hängen vom Umfang ab – deshalb besprechen wir den Aufwand immer vorher mit Ihnen, ohne Überraschungen auf der Rechnung. Die Erstberatung ist kostenlos. Schildern Sie kurz Ihr Anliegen, dann bekommen Sie eine klare Einschätzung.', actions: ['cal', 'wa'] },
         emergency: { text: '⚠️ Das klingt dringend. Bitte trennen Sie das betroffene Gerät vom Netzwerk (WLAN aus bzw. Kabel ziehen), schalten Sie es aber nicht aus, und geben Sie keine Passwörter oder Zahlungen heraus. Rufen Sie uns direkt an, damit wir schnell helfen können.', actions: ['call', 'wa'], link: ['it-security.html', 'IT-Sicherheit'] },
         remote: { text: 'Für die Fernwartung laden Sie TeamViewer oder AnyDesk herunter und geben uns nach kurzer Absprache die angezeigte ID. Eine Verbindung entsteht nur mit Ihrer Freigabe.', actions: ['call', 'wa'], link: ['remote.html', 'Zur Fernwartung'] },
         services: { text: 'Etlabora IT hilft bei: IT-Beratung & Planung, Netzwerk & WLAN & Server, Microsoft 365 & E-Mail, Azure & Intune, IT-Sicherheit, Backup & Datensicherung sowie Support per Fernwartung und vor Ort.', link: ['leistungen.html', 'Alle Leistungen'], chips: ['Microsoft 365', 'WLAN Probleme', 'Backup einrichten'] },
@@ -127,7 +127,7 @@
         private: { text: 'Ja, wir helfen auch Privatkunden – zum Beispiel bei WLAN, neuen Laptops, Druckern, E-Mail oder der Sicherung von Fotos und Dokumenten.', actions: ['call', 'wa'] },
         hours: { text: 'Am besten erreichen Sie uns per WhatsApp oder über das Kontaktformular – wir melden uns schnellstmöglich persönlich zurück. Die aktuellen Erreichbarkeitszeiten finden Sie auch in unserem Google-Profil.', actions: ['wa', 'form'] },
         bot: { text: 'Ich bin ein einfacher Website-Assistent und kenne die Inhalte dieser Webseite. Für Ihre konkrete Situation sprechen Sie am besten direkt mit uns – persönlich und kostenlos.', actions: ['call', 'wa'] },
-        fallback: { text: 'Dazu habe ich keine passende Antwort gefunden. Schreiben Sie uns Ihr Anliegen am besten kurz per WhatsApp oder über das Formular – Sie bekommen eine persönliche Antwort.', actions: ['wa', 'form'], chips: ['Welche Leistungen?', 'Was kostet das?', 'Kontakt'] },
+        fallback: { text: 'Dazu habe ich keine passende Antwort gefunden. Schreiben Sie uns Ihr Anliegen am besten kurz per WhatsApp oder über das Formular – Sie bekommen eine persönliche Antwort.', actions: ['cal', 'wa'], chips: ['Welche Leistungen?', 'Was kostet das?', 'Kontakt'] },
     };
 
     const has = (q, list) => list.some((w) => (w.startsWith(' ') || w.endsWith(' ') ? q.includes(w) : new RegExp('(^|\\s)' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(q)));
@@ -140,6 +140,7 @@
         if (short && has(q, ['danke', 'super', 'perfekt', ' top '])) return A.thanks;
         if (has(q, [' ki ', 'chatgpt', 'roboter', ' bot ', 'bist du ein mensch', 'echter mensch'])) return A.bot;
         if (has(q, ['kosten', ' kostet', ' preis', 'preise', 'teuer', 'guenstig', 'stundensatz', 'was zahl', 'angebot'])) return A.price;
+        if (has(q, ['termin', 'beratung', 'erstberatung', 'buchen', 'kalender'])) return { text: 'Eine kostenlose Erstberatung können Sie direkt online buchen – wählen Sie einfach Ihren Wunschtermin, wir rufen Sie dann an.', actions: ['cal', 'call', 'wa'] };
         if (has(q, ['oeffnungszeit', 'erreichbar', 'wann seid', 'wann sind sie', 'uhrzeit', 'wochenende', 'samstag', 'sonntag', 'abends'])) return A.hours;
         if (has(q, ['teamviewer', 'anydesk', 'fernwartung starten', 'fernwartung', 'remote'])) return A.remote;
         if (has(q, ['privat', 'zuhause', 'zu hause', 'oma', 'opa', 'eltern'])) return A.private;
@@ -176,7 +177,7 @@
     // ---------- Darstellung ----------
     const ACTION = {
         call: ['📞 Anrufen', TEL, false], wa: ['💬 WhatsApp', WA, true],
-        mail: ['✉️ E-Mail', 'mailto:' + MAIL, false], form: ['📝 Formular', 'kontakt.html#formular', false],
+        mail: ['✉️ E-Mail', 'mailto:' + MAIL, false], cal: ['📅 Termin buchen', 'https://cal.com/etlabora-it/erstberatung', true], form: ['📝 Formular', 'kontakt.html#formular', false],
     };
 
     function bubble(type) {
