@@ -2004,3 +2004,17 @@ body:not(.home-page) .remote-call .btn.primary { background: #fff; box-shadow: n
     .ai-chatbot-dot { height: 9px; right: 4px; top: 4px; width: 9px; }
     .ai-chatbot-panel { bottom: 58px; right: -60px; }
 }
+
+/* Handy: Hero-Buttons nebeneinander und kleiner */
+@media (max-width: 620px) {
+    .home-page .hero-buttons { align-items: stretch; flex-direction: row; gap: 8px; }
+    .home-page .hero-buttons .btn { flex: 1 1 0; font-size: 13px; min-height: 44px; padding: 0 8px; white-space: nowrap; width: auto; }
+    .home-page .hero-buttons .btn span { display: none; }
+}
+@media (max-width: 620px) {
+    .home-page .hero-buttons { flex-wrap: nowrap; }
+    .home-page .hero-buttons .btn { min-width: 0; }
+}
+@media (max-width: 380px) {
+    .home-page .hero-buttons .btn { font-size: 12px; line-height: 1.2; padding: 0 6px; text-align: center; white-space: normal; }
+}
