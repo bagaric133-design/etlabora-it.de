@@ -1939,3 +1939,9 @@ body:not(.home-page) .service-icon.service-icon-image { background: transparent 
 body:not(.home-page) .teamviewer-card .btn.primary { background: #0e8ee9; box-shadow: 0 12px 26px rgba(14,142,233,.25); }
 body:not(.home-page) .anydesk-card .btn.primary { background: #ef443b; box-shadow: 0 12px 26px rgba(239,68,59,.25); }
 body:not(.home-page) .remote-call .btn.primary { background: #fff; box-shadow: none; color: #020b19; }
+
+/* Hamburger-Menü ohne Rahmen */
+@media (max-width: 760px) {
+    .mobile-menu-toggle { background: transparent !important; border: 0 !important; box-shadow: none !important; }
+    .mobile-menu-toggle span { height: 2.5px; width: 24px; }
+}
