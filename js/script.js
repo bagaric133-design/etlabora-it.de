@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         drawer.setAttribute('aria-hidden', 'true');
         drawer.innerHTML = `
             <div class="mobile-drawer-head">
-                <a href="index.html" class="mobile-drawer-logo" aria-label="Etlabora IT Startseite"><img src="images/logo-footer.png" alt="Etlabora IT"></a>
+                <a href="index.html" class="mobile-drawer-logo" aria-label="Etlabora IT Startseite"><img src="images/logo-footer.webp" alt="Etlabora IT"></a>
                 <button class="mobile-drawer-close" type="button" aria-label="Menü schließen">×</button>
             </div>
             <nav class="mobile-drawer-nav" aria-label="Mobile Navigation">
