@@ -7,7 +7,7 @@
     <title>IT Service Bonn &amp; Rhein-Sieg | IT Support für Unternehmen | Etlabora IT</title>
     <link rel="canonical" href="https://www.etlabora-it.de/" />
     <meta name="description" content="IT Service und IT Support für Unternehmen in Bonn, Rhein-Sieg und Umgebung: Microsoft 365, Netzwerk, Server, IT-Sicherheit, Backup und Fernwartung." />
-    <link rel="stylesheet" href="css/style.css?v=20261020-11" />
+    <link rel="stylesheet" href="css/style.css?v=20261030-2" />
     <meta property="og:title" content="Etlabora IT – IT-Service Bonn &amp; Rhein-Sieg" />
     <meta property="og:description" content="Persönlicher IT-Service für kleine Unternehmen, Praxen und Selbstständige in Bonn &amp; Rhein-Sieg." />
     <meta property="og:url" content="https://www.etlabora-it.de/" />
@@ -73,7 +73,7 @@
         <h2 class="hero-title">Ihre IT. <em>Sicher.</em><br>Zuverlässig.<br>Persönlich.</h2>
         <p class="hero-text">Etlabora IT entwickelt stabile IT-Konzepte, betreut Netzwerke, schützt Ihre Daten und sorgt dafür, dass Ihre Systeme im Alltag zuverlässig funktionieren.</p>
         <div class="hero-buttons">
-            <a href="kontakt.html" class="btn primary">Kostenlose Erstberatung <span aria-hidden="true">→</span></a>
+            <a href="#anfrage" class="btn primary">Kostenlose Erstberatung <span aria-hidden="true">→</span></a>
             <a href="leistungen.html" class="btn secondary">Leistungen entdecken <span aria-hidden="true">→</span></a>
         </div>
     </div>
@@ -190,6 +190,84 @@
         <a href="kontakt.html" class="btn primary">Kostenlose Erstberatung <span aria-hidden="true">→</span></a>
     </div>
 </section>
+<section class="quiz-section" id="anfrage">
+    <div class="quiz-head">
+        <p class="label">Anfrage-Assistent</p>
+        <h2>In 1 Minute zur passenden IT-Lösung</h2>
+        <p>Beantworten Sie ein paar kurze Fragen – wir melden uns mit einer kostenlosen, persönlichen Einschätzung.</p>
+    </div>
+    <form class="quiz" id="quiz" novalidate>
+        <input type="checkbox" name="botcheck" class="cf-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="quiz-progress" aria-hidden="true"><span></span></div>
+        <p class="quiz-count">Schritt <b>1</b> von 5</p>
+
+        <fieldset class="quiz-step is-active" data-step="1">
+            <legend>Worum geht es?</legend>
+            <div class="quiz-options">
+                <label><input type="radio" name="anliegen" value="Akutes IT-Problem"><span><i>🛠️</i>Akutes IT-Problem</span></label>
+                <label><input type="radio" name="anliegen" value="Neue Einrichtung / Projekt"><span><i>🚀</i>Neue Einrichtung / Projekt</span></label>
+                <label><input type="radio" name="anliegen" value="Laufende IT-Betreuung"><span><i>🤝</i>Laufende IT-Betreuung</span></label>
+                <label><input type="radio" name="anliegen" value="Sicherheit & Backup"><span><i>🛡️</i>Sicherheit &amp; Backup</span></label>
+                <label><input type="radio" name="anliegen" value="Microsoft 365 & E-Mail"><span><i>✉️</i>Microsoft 365 &amp; E-Mail</span></label>
+                <label><input type="radio" name="anliegen" value="Netzwerk & WLAN"><span><i>📶</i>Netzwerk &amp; WLAN</span></label>
+            </div>
+        </fieldset>
+
+        <fieldset class="quiz-step" data-step="2">
+            <legend>Für wen ist die Unterstützung?</legend>
+            <div class="quiz-options">
+                <label><input type="radio" name="groesse" value="Privat"><span><i>🏠</i>Privat</span></label>
+                <label><input type="radio" name="groesse" value="1 Arbeitsplatz / selbstständig"><span><i>👤</i>Selbstständig / 1 Arbeitsplatz</span></label>
+                <label><input type="radio" name="groesse" value="2–5 Arbeitsplätze"><span><i>👥</i>2–5 Arbeitsplätze</span></label>
+                <label><input type="radio" name="groesse" value="6–20 Arbeitsplätze"><span><i>🏢</i>6–20 Arbeitsplätze</span></label>
+                <label><input type="radio" name="groesse" value="Mehr als 20 Arbeitsplätze"><span><i>🏬</i>Mehr als 20</span></label>
+            </div>
+        </fieldset>
+
+        <fieldset class="quiz-step" data-step="3">
+            <legend>Wie dringend ist es?</legend>
+            <div class="quiz-options">
+                <label><input type="radio" name="dringlichkeit" value="Sofort"><span><i>⚡</i>Sofort</span></label>
+                <label><input type="radio" name="dringlichkeit" value="In den nächsten Tagen"><span><i>📅</i>In den nächsten Tagen</span></label>
+                <label><input type="radio" name="dringlichkeit" value="In Planung"><span><i>🗓️</i>In Planung</span></label>
+            </div>
+        </fieldset>
+
+        <fieldset class="quiz-step" data-step="4">
+            <legend>Wo sind Sie?</legend>
+            <div class="quiz-options">
+                <label><input type="radio" name="ort" value="Bonn"><span><i>📍</i>Bonn</span></label>
+                <label><input type="radio" name="ort" value="Rhein-Sieg-Kreis"><span><i>📍</i>Rhein-Sieg-Kreis</span></label>
+                <label><input type="radio" name="ort" value="Köln"><span><i>📍</i>Köln</span></label>
+                <label><input type="radio" name="ort" value="Woanders – Fernwartung"><span><i>💻</i>Woanders / Fernwartung</span></label>
+            </div>
+        </fieldset>
+
+        <fieldset class="quiz-step" data-step="5">
+            <legend>Wie erreichen wir Sie?</legend>
+            <div class="quiz-fields">
+                <label class="cf-field"><span>Name *</span><input type="text" name="name" autocomplete="name" required></label>
+                <label class="cf-field"><span>Telefon *</span><input type="tel" name="telefon" autocomplete="tel" required></label>
+                <label class="cf-field"><span>E-Mail</span><input type="email" name="email" autocomplete="email" placeholder="optional"></label>
+                <label class="cf-field"><span>Kurz beschrieben (optional)</span><textarea name="nachricht" rows="3" placeholder="z. B. WLAN bricht im Büro ständig ab"></textarea></label>
+                <label class="cf-consent"><input type="checkbox" name="datenschutz" required><span>Ich bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage verwendet werden. Mehr in der <a href="datenschutz.html">Datenschutzerklärung</a>. *</span></label>
+            </div>
+        </fieldset>
+
+        <div class="quiz-done" hidden>
+            <span aria-hidden="true">✓</span>
+            <h3>Vielen Dank!</h3>
+            <p>Ihre Anfrage ist angekommen. Wir melden uns schnellstmöglich persönlich bei Ihnen.</p>
+        </div>
+
+        <div class="quiz-nav">
+            <button type="button" class="quiz-back" hidden>← Zurück</button>
+            <button type="submit" class="btn primary quiz-submit" hidden>Kostenlos anfragen <span aria-hidden="true">→</span></button>
+        </div>
+        <p class="quiz-status" role="status" aria-live="polite"></p>
+        <p class="quiz-trust">🔒 Kostenlos &amp; unverbindlich · Antwort vom persönlichen Ansprechpartner</p>
+    </form>
+</section>
 <section class="home-process">
     <div class="process-heading"><p class="label">Einfach gut betreut</p><h2>Von der ersten Analyse bis zum laufenden Betrieb.</h2><p>Keine komplizierten Prozesse und kein Technik-Kauderwelsch. Wir schaffen eine IT, die zu Ihrem Unternehmen passt.</p><a href="kontakt.html" class="text-link">Projekt besprechen <span>→</span></a></div>
     <div class="process-steps">
@@ -253,6 +331,7 @@
 <script src="js/script.js?v=20261020-1"></script>
 <script src="js/chat-data.js?v=20261020-1" defer></script>
 <script src="js/chat.js?v=20261020-2" defer></script>
+<script src="js/anfrage.js?v=20261030-1" defer></script>
 
 <a class="whatsapp-float" href="https://wa.me/4915510385216" target="_blank" rel="noopener" aria-label="WhatsApp Nachricht senden"><span class="wa-icon" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><path d="M16.02 3.2A12.73 12.73 0 0 0 3.3 15.93c0 2.24.58 4.38 1.68 6.28L3.2 28.8l6.75-1.76a12.68 12.68 0 0 0 6.07 1.55h.01A12.73 12.73 0 0 0 16.02 3.2Zm0 23.22h-.01c-1.91 0-3.78-.51-5.41-1.49l-.39-.23-4 .99 1.07-3.88-.25-.4a10.46 10.46 0 0 1-1.61-5.48A10.6 10.6 0 1 1 16.02 26.42Zm5.82-7.94c-.32-.16-1.9-.94-2.2-1.04-.29-.11-.5-.16-.72.16-.21.32-.82 1.04-1.01 1.25-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.9-1.78-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.74-.98-2.38-.26-.62-.52-.54-.72-.55h-.61c-.21 0-.56.08-.85.4-.29.32-1.12 1.1-1.12 2.67s1.15 3.1 1.31 3.31c.16.21 2.27 3.46 5.5 4.85.77.33 1.37.53 1.84.68.77.24 1.47.21 2.03.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37Z"/></svg></span><span>WhatsApp</span></a>
 
